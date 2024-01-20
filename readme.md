@@ -1,1 +1,1 @@
-this is a chat app
+this is a real time chat app
