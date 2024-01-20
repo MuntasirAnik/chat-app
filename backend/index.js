@@ -1,5 +1,12 @@
 const express = require('express')
+const dotenv = require('dotenv')
 
 const app = express();
+dotenv.config();
 
-app.listen(5001, console.log('server is running at port 5001'))
+app.get("/" , (req, res)=>{
+    res.send("api is running")
+})
+
+const PORT = process.env.PORT || 5000
+app.listen(PORT, console.log(`server is running at port ${PORT}`))
