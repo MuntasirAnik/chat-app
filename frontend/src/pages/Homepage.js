@@ -20,7 +20,7 @@ const Homepage = () => {
       className="text-3xl font-bold h-screen w-screen bg-cover bg-center relative"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <Container maxW={"xl"} centerContent>
+      <Container maxW={"sm"} centerContent>
         <Box
           display={"flex"}
           justifyContent={"center"}
@@ -36,12 +36,12 @@ const Homepage = () => {
         <Box
           bg={"white"}
           w={"100%"}
-          p={"4"}
+          p={"2"}
           borderRadius={"lg"}
           borderWidth={"1px"}
         >
           <Tabs variant="soft-rounded">
-            <TabList mb={"1em"}>
+            <TabList>
               <Tab width={"50%"}>Login</Tab>
               <Tab width={"50%"}>Sign Up</Tab>
             </TabList>

@@ -8,6 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { BsFillEyeSlashFill } from "react-icons/bs";
+import { HiMiniEye } from "react-icons/hi2";
 
 const Signup = () => {
   const [name, setName] = useState();
@@ -22,55 +24,79 @@ const Signup = () => {
   const submitHandler = () => {};
 
   return (
-    <VStack spacing={"5px"}>
+    <VStack p={"1px"}>
       <FormControl id="firstName" isRequired>
-        <FormLabel mb={"0px"}>Name</FormLabel>
+        <FormLabel fontSize={"small"} mb={"-12px"}>
+          Name
+        </FormLabel>
         <Input
-          mt={"0px"}
+          mb={"-8px"}
           placeholder="enter your name"
+          fontSize={"small"}
           onChange={(e) => setName(e.target.value)}
         />
       </FormControl>
       <FormControl id="email" isRequired>
-        <FormLabel>email</FormLabel>
+        <FormLabel fontSize={"small"} mb={"-12px"}>
+          Email
+        </FormLabel>
         <Input
+          mb={"-8px"}
+          fontSize={"small"}
           placeholder="enter your email"
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Password</FormLabel>
+        <FormLabel fontSize={"small"} mb={"-8px"}>
+          Password
+        </FormLabel>
         <InputGroup>
           <Input
+            mb={"-8px"}
+            fontSize={"small"}
             type={show ? "text" : "password"}
             placeholder="enter your password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <InputRightElement width={"4.5rem"}>
             <Button h={"1.75rem"} size={"sm"} onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+              {show ? <BsFillEyeSlashFill /> : <HiMiniEye />}
             </Button>
           </InputRightElement>
         </InputGroup>
       </FormControl>
       <FormControl id="confirmPassword" isRequired>
-        <FormLabel>Confirm Password</FormLabel>
+        <FormLabel fontSize={"small"} mb={"-8px"}>
+          Confirm Password
+        </FormLabel>
         <InputGroup>
           <Input
+            mb={"-8px"}
+            fontSize={"small"}
             type={show ? "text" : "password"}
             placeholder="confirm password"
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <InputRightElement width={"4.5rem"}>
-            <Button h={"1.75rem"} size={"sm"} onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+            <Button
+              fontSize={"small"}
+              h={"1.75rem"}
+              size={"sm"}
+              onClick={handleClick}
+            >
+              {show ? <BsFillEyeSlashFill /> : <HiMiniEye />}
             </Button>
           </InputRightElement>
         </InputGroup>
       </FormControl>
       <FormControl id="Pic" isRequired>
-        <FormLabel>Upload your picture</FormLabel>
+        <FormLabel fontSize={"small"} mb={"-8px"}>
+          Upload your picture
+        </FormLabel>
         <Input
+          h={"auto"}
+          fontSize={"small"}
           type="file"
           p={"1.5"}
           accept="image/*"
@@ -80,7 +106,7 @@ const Signup = () => {
       <Button
         colorScheme="blue"
         width={"100%"}
-        style={{ marginTop: 15 }}
+        style={{ marginTop: 5 }}
         onClick={submitHandler}
       >
         Sign up
