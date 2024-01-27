@@ -48,7 +48,7 @@ const login = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(401);
-    throw new Error("Invalid Email or password");
+    throw new Error("Invalid Email or Password");
   }
 });
 module.exports = { registerUser, login };
