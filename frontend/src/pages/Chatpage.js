@@ -9,11 +9,11 @@ const ChatPage = () => {
     setChats = "chats";
   };
 
-  useEffect(() => {
-    fetchChats();
-  }, []);
+  // useEffect(() => {
+  //   fetchChats();
+  // }, []);
 
-  return <div>{chats.map()}</div>;
+  return <div>chat</div>;
 };
 
 export default ChatPage;

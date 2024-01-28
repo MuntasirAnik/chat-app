@@ -51,4 +51,14 @@ const login = asyncHandler(async (req, res) => {
     throw new Error("Invalid Email or Password");
   }
 });
-module.exports = { registerUser, login };
+
+const getUsers = asyncHandler(async (req, res) => {
+  const users = await User.find();
+  if (users) {
+    res.status(200).json(users);
+  } else {
+    res.status(404).json({ message: "No users found" });
+  }
+});
+
+module.exports = { registerUser, login, getUsers };

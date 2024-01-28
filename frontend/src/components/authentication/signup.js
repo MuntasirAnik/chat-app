@@ -33,7 +33,7 @@ const Signup = () => {
       toast({
         title: "Please Select an Image",
         status: "warning",
-        duration: 5000,
+        duration: 50000,
         isClosable: true,
         position: "top-right",
       });
@@ -101,7 +101,7 @@ const Signup = () => {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:5001/api/v1/auth/register",
+        "/api/v1/auth/register",
         {
           name,
           email,
