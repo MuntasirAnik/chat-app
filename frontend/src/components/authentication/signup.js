@@ -73,6 +73,7 @@ const Signup = () => {
 
   const submitHandler = async () => {
     setLoading(true);
+    console.log("here");
     if (!name || !email || !password || !confirmPassword) {
       toast({
         title: "Please Fill All the field",
@@ -218,7 +219,7 @@ const Signup = () => {
         width={"100%"}
         style={{ marginTop: 5 }}
         onClick={submitHandler}
-        isLoading={loading}
+        // isLoading={loading}
       >
         Sign up
       </Button>
