@@ -13,7 +13,7 @@ import { HiMiniEye } from "react-icons/hi2";
 
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-const { useToast } = require("@chakra-ui/react");
+import { useToast } from "@chakra-ui/react";
 
 const Login = () => {
   const [email, setEmail] = useState();
