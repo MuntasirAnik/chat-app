@@ -1,3 +1,4 @@
+const mongoose = require("mongoose");
 const User = require("../Models/user.model");
 const Chat = require("../Models/chat.model");
 const asyncHandler = require("express-async-handler");
@@ -41,8 +42,7 @@ const createChat = asyncHandler(async (req, res) => {
       );
       res.status(200).send(fullChat);
     } catch (error) {
-      res.status(400);
-      throw new Error(error.message);
+      res.status(400).send({ error: error.message }); // Sending error message in response
     }
   }
 });
